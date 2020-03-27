@@ -1,1 +1,12 @@
-.side_bar
+.chat-side
+  .side-header
+    .side-box
+      %p.user-name TECH::EXPERT
+      %ul.menu
+        %li.new-group
+          %a{:href => "#"}
+          = icon('far', 'edit')
+        %li.edit-user
+          %a{:href => "#"}
+          = icon('fas', 'cog')
+  .groups

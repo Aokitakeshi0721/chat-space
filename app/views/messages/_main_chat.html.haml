@@ -1,1 +1,17 @@
-.main_chat
+.chat-main
+  .main-header
+    .header-leftbox
+      %h2.current-group #〇〇期 エンジニアクラス
+      %ul.member-list
+        Member:
+        %li.member-first abe
+        %li.member-second matsumoto
+        %li.member-third suzuki
+    %a{:href => "#"}
+      .edit-btn Edit
+  .messages
+  .form
+    %form.new-message
+      .input-box
+        %input.input-text{:placeholder => "type a message", :type => "text"}/
+      %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}/
