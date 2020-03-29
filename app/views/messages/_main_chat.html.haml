@@ -1,17 +1,41 @@
 .chat-main
-  .main-header
-    .header-leftbox
-      %h2.current-group #〇〇期 エンジニアクラス
+  .chat-main__header
+    .chat-main__header__leftbox
+      %h2.chat-main__header__leftbox__current-group 
+        GROUP_NAME
       %ul.member-list
         Member:
-        %li.member-first abe
-        %li.member-second matsumoto
-        %li.member-third suzuki
-    %a{:href => "#"}
-      .edit-btn Edit
+        %li.member-first AOKI
+        %li.member-second KOBAYASHI
+        %li.member-third YAMAGUTI
+
+    -# .chat-main__header__leftbox
+    -#   %h2.chat-main__header__leftbox__current-group 
+    -#     RRR
+    -#   %ul.chat-main__header__left-box__member-list
+    -#     Member：
+    -#     %li.chat-main__header__left-box__member-list__member
+    -#       AOKI
+
+
+
+    %a.edit-btn{:href => "#"}Edit
+
+
   .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker あおき
+        %p.message__upper-info__date 2020/03/27(Fri) 20:35:12
+      %p.message__text こんにちは！！！
+
+
+
   .form
     %form.new-message
       .input-box
-        %input.input-text{:placeholder => "type a message", :type => "text"}/
-      %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}/
+        %input.input-text{:placeholder => "type a message", :type => "text"}
+        %label.input-box_image
+          = icon('fas', 'image')
+          %input.input-box__image__file{:type => "file"}
+      %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}

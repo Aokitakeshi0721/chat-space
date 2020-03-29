@@ -1,12 +1,18 @@
 .chat-side
   .side-header
-    .side-box
-      %p.user-name TECH::EXPERT
-      %ul.menu
-        %li.new-group
-          %a{:href => "#"}
-          = icon('far', 'edit')
-        %li.edit-user
-          %a{:href => "#"}
-          = icon('fas', 'cog')
+    .side-header__box
+      %p.side-header__box__user-name 
+        USER NAME
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__edit-user
+          = link_to "#" ,class:"edit-user" do
+            = icon('far', 'edit') 
+        %li.side-header__box__menu__new-group
+          = link_to "#" do
+            = icon('fas', 'cog')
   .groups
+    = link_to "#", class:"group" do
+      %p.group__group-name
+        tech::camp
+      %P.group__lastest-message
+        まだメッセージがありません
