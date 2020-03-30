@@ -28,8 +28,7 @@
         &__menu {
           display: flex;
           text-decoration: none;
-          
-          .edit-user{
+          .side-header__box__menu__edit-user{
             margin-right: 5px;
           }
             li{
@@ -41,25 +40,31 @@
       }
     }
   
-    .groups {
+    .side-bar__groups-list{
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px;
       .group{
-        color: white;
-        text-decoration: none;
         margin-bottom: 40px;
-
         &__group-name{
           font-size: 15px;
           margin-bottom: 5px;
         }
-        &__lastest-message{
+        &__group__message{
           font-size: 11px; 
+        }
+        a{        
+          color: white;
+          text-decoration: none;
         }
       }
     }
   }
+
+
+
+
+
 
   .chat-main {
     width: calc(100% - 300px);
