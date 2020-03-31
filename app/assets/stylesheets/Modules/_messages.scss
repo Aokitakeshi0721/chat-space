@@ -100,11 +100,14 @@
           height: 40px;
           line-height: 40px;
           font-size: 16px;
-          border: 1px solid #38aef0;
+          border: 1px solid $light_blue;
           padding: 0 20px;
           margin-top: 28px;
-          text-decoration: none;
-          color: #38aef0;
+
+          a{
+            text-decoration: none;
+            color: $light_blue;
+          }
       }
     }
   
@@ -143,7 +146,7 @@
       height: 90px;
       padding: 20px 40px;
       
-      .new-message {
+      .new_message {
         display: flex;
 
         .input-box {
@@ -164,7 +167,7 @@
             right: 10px;
             cursor: pointer;
 
-            .input-box__image__file{display: none;
+            .hidden{display: none;
             }
           }
         }
@@ -173,7 +176,7 @@
           height: 50px;
           padding: 0 30px;
           margin-left: 15px;
-          background-color: #38aef0;
+          background-color: $light_blue;
           font-size: 16px;
           cursor: pointer;
           color: #ffffff;

@@ -2,40 +2,35 @@
   .chat-main__header
     .chat-main__header__leftbox
       %h2.chat-main__header__leftbox__current-group 
-        GROUP_NAME
-      %ul.member-list
-        Member:
-        %li.member-first AOKI
-        %li.member-second KOBAYASHI
-        %li.member-third YAMAGUTI
-
-    -# .chat-main__header__leftbox
-    -#   %h2.chat-main__header__leftbox__current-group 
-    -#     RRR
-    -#   %ul.chat-main__header__left-box__member-list
-    -#     Member：
-    -#     %li.chat-main__header__left-box__member-list__member
-    -#       AOKI
+        = @group.name
+        %ul.member-list
+          Member:
+          %li.member-first
+            - @group.users.each do |user|
+              = user.name
 
 
-
-    %a.edit-btn{:href => "#"}Edit
+    .edit-btn
+      = link_to '編集', edit_group_path(@group)
 
 
   .messages
+    -# = render @messages
     .message
       .message__upper-info
-        %p.message__upper-info__talker あおき
-        %p.message__upper-info__date 2020/03/27(Fri) 20:35:12
-      %p.message__text こんにちは！！！
-
+        %p.message__upper-info__talker 
+          = current_user.name
+        %p.message__upper-info__date
+          = current_user.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      %p.message__text 
+        = @messages.last
 
 
   .form
-    %form.new-message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input.input-text{:placeholder => "type a message", :type => "text"}
-        %label.input-box_image
-          = icon('fas', 'image')
-          %input.input-box__image__file{:type => "file"}
-      %input.submit-btn{:name => "commit", :type => "submit", :value => "Send"}
+        = f.text_field :content, class: 'input-text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box_image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'submit-btn'
