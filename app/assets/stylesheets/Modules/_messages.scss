@@ -22,8 +22,6 @@
         display: flex;
         justify-content: space-between;
         font-weight: bold;
-
-
         &__user-name {
             font-size: 16px;
         }
@@ -70,12 +68,13 @@
 
 
   .chat-main {
-    position: fixed; 
+
     left: 300px;  
     width: calc(100% - 300px);
     background-color: #ffffff;
 
     &__header {
+      // position: fixed; 
       height: 100px;
       background-color: #ffffff;
       border-bottom: 1px solid #eeeeee;
@@ -147,6 +146,7 @@
       }
     }
     .form {
+      // position: fixed; 
       background-color: #d2d2d2;
       height: 90px;
       padding: 20px 40px;
