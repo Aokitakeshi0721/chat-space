@@ -1,12 +1,14 @@
 .wrapper{
   display: flex;
   height: 100vh;
+  width: 100%;
 
   .chat-side{
     width: 300px;
     background-color: #253141;
 
     .side-header {
+      position: fixed; 
       background-color: #253141;
       height: 100px;
       color: white;
@@ -44,6 +46,7 @@
       background-color: #2f3e51;
       height: calc(100vh - 100px);
       padding: 20px;
+      box-sizing: border-box;
       .group{
         margin-bottom: 40px;
         &__group-name{
@@ -67,6 +70,8 @@
 
 
   .chat-main {
+    position: fixed; 
+    left: 300px;  
     width: calc(100% - 300px);
     background-color: #ffffff;
 
@@ -167,7 +172,8 @@
             right: 10px;
             cursor: pointer;
 
-            .hidden{display: none;
+            .hidden{
+              display: none;
             }
           }
         }
