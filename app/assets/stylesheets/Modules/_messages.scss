@@ -8,7 +8,6 @@
     background-color: #253141;
 
     .side-header {
-      // position: fixed; 
       background-color: #253141;
       height: 100px;
       color: white;
@@ -75,13 +74,11 @@
     background-color: #ffffff;
 
     &__header {
-      // position: fixed; 
       height: 100px;
       background-color: #ffffff;
       border-bottom: 1px solid #eeeeee;
       display: flex;
       padding: 0 40px;
-      // align-items: center;
       justify-content: space-between;
 
       &__leftbox{
@@ -148,9 +145,7 @@
       }
     }
     .form {
-      // position: fixed; 
       background-color: #d2d2d2;
-      // height: 90px;
       padding: 20px 40px;
       
       .new_message {
